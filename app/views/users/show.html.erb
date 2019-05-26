@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recession:</strong>
+  <%= @user.recession_id %>
+</p>
+<p>
+  <strong>Account:</strong>
+  <%= @user.account_id %>
+</p>
+
+<p>
+  <strong>Prediction:</strong>
+  <%= @user.prediction %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

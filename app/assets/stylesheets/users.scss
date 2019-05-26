@@ -1,0 +1,43 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+    width: 100%;
+    
+    margin-top: 50px;
+}
+.left{
+    float:left;
+}
+
+.clear{
+    clear: both;
+}
+.left table{
+}
+.users {
+    width: 40%;
+}
+.helper{
+    width: 50%;
+    margin-left: 10%;
+}
+.interact h1{
+    margin: 0 4em 1.25em 0em;
+	padding: 0.5em 0.5em 0.5em 0em;
+	background: #FFF;
+	color: #686397;
+	font-size: 1.5em;
+}
+
+#signuplink {
+    color: #FF99FF;
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+
+body{
+    margin-right: 0px;
+}

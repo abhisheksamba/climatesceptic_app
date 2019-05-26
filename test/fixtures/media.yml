@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Date: MyString
+  CCSI: 1.5
+  Media_Index: 1
+  Environmental_Magazines: 1
+  Conservative_Magazines: 1
+
+two:
+  Date: MyString
+  CCSI: 1.5
+  Media_Index: 1
+  Environmental_Magazines: 1
+  Conservative_Magazines: 1

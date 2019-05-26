@@ -1,0 +1,85 @@
+<div class="middle">
+  <h1>Interactive Data</h1>
+
+</div>
+
+
+<div class="left users">
+    <h1>Create CCSI Prediction</h1>
+    <%= render 'form', user: @user %>
+  
+  
+  <div class="secondtable">
+    
+ 
+    <h1>User CCSI Predictions & Recession Dates</h1>
+<p>To establish this predictive charting exercise, we’ve linked the “recessions” model with the “users” model using the “recession_id”. The charting tool updates dynamically when the user makes a prediction and stores it in the users model.
+</p>
+<table class="table table-bordered table-striped table">
+  <thead>
+    <tr class="danger">
+      <th>ID</th>
+      <th>Recession Date</th>
+      <th>CCSI Prediction</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.recession_id %></td>
+        <td>
+            <%= @recessions.find(user.recession_id).Date %>
+        </td>
+        <td><%= user.prediction %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+ </div>
+  <div id="signuplink"> <%= link_to "Click to View Historical User Predictions", ranks_path %>
+  </div>
+</div>
+<div class="left helper">
+  
+        <h1>Recession Data</h1>
+
+<table id="recessions" class ="table table-bordered table-condensed table-hover">
+    <thead class="thread-dark">
+        <tr class = "warning">
+            <th>ID</th>
+            <th>Date</th>
+            <th>Unemployment Rate</th> 
+            <th>GDP Growth Rate</th> 
+            <th>Recession Dates</th> 
+            <th>Nonfarm Payroll</th> 
+        </tr>
+    </thead>
+    <tbody>
+  <%@recessions.each do|r| %>
+      <tr>
+        <td><%=r.id%></td>
+        <td><%=r.Date%></td>
+        <td><%= r.Unemployment %></td>
+        <td><%= r.GDPGrowth %></td>
+        <td><%= r.Recession_Dates %></td>
+        <td><%= r.Nonfarm_Payrolls %></td>
+      </tr>
+  </tbody>
+  
+  <%end%>
+    
+</table>
+</div>
+
+<div class="clear">
+    
+    <h1 id="charttitle"> CCSI Predictions </h1>
+    
+    <%= column_chart User.group(:id).maximum(:prediction), min: -40, max: 50, legend: true, label: "Predicted CCSI", xtitle: "User Number", ytitle: "Predicted CCSI", colors: ["#FF99FF", "#9900FF"] %>
+    
+
+</div>

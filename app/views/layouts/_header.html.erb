@@ -1,0 +1,33 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+     
+      <%= link_to image_tag( "ManBearPig.png", alt: "ManBearPig", id: "logo" ), "https://www.youtube.com/watch?v=0AW4nSq0hAc", target: "_blank" %>
+
+    
+        <nav>
+          <ul class= "nav navbar-nav navbar-right">
+            <li><%= link_to "Home", controller: "home", action: "intro" %></li>
+            <li><%= link_to "Library", controller: "home", action: "lib"%> </li>
+            <li><%= link_to "Interactive Data", controller: "users", action: "new"%></li>
+            <li><%= link_to "CCSI DATA", controller: "home", action: "CCSI"%> </li>
+            
+            <% if logged_in? %>
+                <li><%= link_to "Accounts", accounts_path %></li>
+                 <li class= "dropdown">
+                  <a href= "#" class= "dropdown-toggle" data-toggle= "dropdown">
+                  Account <b class= "caret"></b>
+                  </a>
+                 <ul class= "dropdown-menu">
+                  <li><%= link_to "Profile", current_account %></li>
+	                <li><%= link_to "Settings", edit_account_path(current_account) %></li>
+	                <li class= "divider"></li>
+                  <li><%= link_to "Log out", logout_path, method: :delete %></li>
+                 </ul>
+                </li>
+               <% else %>
+                  <li><%= link_to "Log in", login_path %></li>
+              <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>

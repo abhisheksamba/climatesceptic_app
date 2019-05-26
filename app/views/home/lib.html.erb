@@ -1,0 +1,149 @@
+<h1> All Timeseries Variables used for Vector Autoregression </h1>
+
+<p><small>This page is a library that hosts all the timeseries variables that are used in the regression analysis to predict the CCSI. For the purposes of this project, we only use the “recessionary variables” data to allow users to generate predictions for the model. This library will be used to allow users
+additional functionality such as generating regressions and testing data analysis results discussed in the thesis.
+</small>
+</p>
+
+<h2> Economic Recessionary Factors</h2>
+<table id="recessions" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Date </th>
+            <th> CCSI </th>
+            <th> Unemployment Rate</th>
+            <th> GDP Growth (%change)</th>
+            <th> Price of Oil </th>
+            <th> Industrial Production Index </th>
+            <th> Recession Dates </th>
+            <th> Total Nonfarm Payrolls (%change) </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @recessions.each do |n| %>
+        <tr>
+            <td> <%= n.id %></td>
+            <td> <%= n.Date %></td>
+            <td> <%= n.CCSI %></td>
+            <td> <%= n.Unemployment %></td>
+            <td> <%= n.GDPGrowth %></td>
+            <td> <%= n.Oil_Price %></td>
+            <td> <%= n.IPI %></td>
+            <td> <%= n.Recession_Dates %></td>
+            <td> <%= n.Nonfarm_Payrolls %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+
+<h2> Media Advocacy and Coverage</h2>
+<table id= "media" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Date </th>
+            <th> CCSI </th>
+            <th> Media Index (Coverage) </th>
+            <th> Count of Environmental Magazines</th>
+            <th> Count of Conservative Magazines</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @media.each do |n| %>
+        <tr>
+            <td> <%= n.id %></td>
+            <td> <%= n.Date %></td>
+            <td> <%= n.CCSI %></td>
+            <td> <%= n.Media_Index %></td>
+            <td> <%= n.Environmental_Magazines %></td>
+            <td> <%= n.Conservative_Magazines %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+
+<h3> Political Elite Cues</h3>
+<table id="politics" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Date </th>
+            <th> CCSI </th>
+            <th> Democrat Statements For CC</th>
+            <th> Republican Statements Against CC</th>
+            <th> House Hearings on CC </th>
+            <th> Senate Hearings on CC </th>
+            <th> LCV Dem Pro-CC Score </th>
+            <th> LCV Republican Anti-CC Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @elite_cues.each do |n| %>
+        <tr>
+            <td> <%= n.id %></td>
+            <td> <%= n.Date %></td>
+            <td> <%= n.CCSI %></td>
+            <td> <%= n.Democrat_Statements %></td>
+            <td> <%= n.Republican_Statements %></td>
+            <td> <%= n.House_Hearings %></td>
+            <td> <%= n.Senate_Hearings %></td>
+            <td> <%= n.LCV_Dem %></td>
+            <td> <%= n.LCV_Rep %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+
+<h2> Extreme Weather Conditions</h2>
+<table id="extreme" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Date </th>
+            <th> CCSI </th>
+            <th> CEI</th>
+            <th> Warm Areas</th>
+            <th> Cold Areas </th>
+            <th> DSCI </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @weathers.each do |n| %>
+        <tr>
+            <td> <%= n.id %></td>
+            <td> <%= n.Date %></td>
+            <td> <%= n.CCSI %></td>
+            <td> <%= n.CEI %></td>
+            <td> <%= n.Warm_Areas %></td>
+            <td> <%= n.Cold_Areas %></td>
+            <td> <%= n.DSCI %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+
+<h2> Scientific Information on Climate Change</h2>
+<table id="science" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Date </th>
+            <th> CCSI </th>
+            <th> Popular Scientific Magazine Articles </th>
+            <th> Release of Major Scientific Report</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @sciences.each do |n| %>
+        <tr>
+            <td> <%= n.id %></td>
+            <td> <%= n.Date %></td>
+            <td> <%= n.CCSI %></td>
+            <td> <%= n.Scientific_Magazines %></td>
+            <td> <%= n.Scientific_Reports %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+

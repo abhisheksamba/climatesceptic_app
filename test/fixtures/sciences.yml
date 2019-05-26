@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Date: MyString
+  CCSI: 1.5
+  Scientific_Magazines: 1
+  Scientific_Reports: 1
+
+two:
+  Date: MyString
+  CCSI: 1.5
+  Scientific_Magazines: 1
+  Scientific_Reports: 1

@@ -1,0 +1,97 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body{
+    margin: 100px;
+    padding-top: 50px;
+}
+.jumbotron{
+margin-top: 30px;
+}
+#logo {
+width: 50px;
+padding-top: 20px;
+padding-bottom: 20px;
+float: left;
+    
+}
+.nav.navbar-nav.navbar-right li a{
+    color: #C4BEC0;
+}
+
+.container{
+    
+}
+
+.nav{
+    float: right;
+    padding-top: 20px;
+padding-bottom: 20px;
+}
+.middle{
+    text-align: center;
+    margin: auto;
+    
+}
+.field p{
+    margin-bottom: 10px;
+}
+.map img{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+}
+.navbar{
+    background-color: #172B94;
+    color: black;
+}
+
+footer{
+    border-top: 2px solid grey;
+    color: #777;
+    margin-top: 35px;
+    background-color: black;
+}
+
+footer a:hover{color: yellow;}
+footer small {float: left;}
+footer ul{
+    float: right;
+    list-style: none;}
+footer ul li{
+    float: right;
+    margin-left: 20px;
+}            
+
+#charttitle {
+    color: black;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+h3{
+    font-size: 19px;
+    color: grey;
+}
+.btn{
+    margin-top: 10px;
+}
+.jumbotron{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+        padding-right: 30px;
+
+}
+
+.jumbotron p{
+    font-size: 15px;
+}
+
+.left p{
+    margin-bottom: 10px;
+}
+
+.secondtable{
+    margin-top: 35px;
+}

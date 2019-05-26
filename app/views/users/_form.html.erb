@@ -1,0 +1,51 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  
+    
+<p>The Recessions table provides a summary of all the timeseries variables that help predict the CCSI. Users can refer to this data and make predictions for the CCSI for the respective “date” ids. Once the predictions are generated, they are autosaved to the User model and dynamically updated onto the Bar chart. 
+</p>
+<p>Valid guesses for the CCSI predictions must range between 5 – 50% while valid date ids will fall in the range: 1-64 where “1” = Q1 2000 and “64” = Q4 2015</p>
+  
+  <% if logged_in? %>
+    <div class="field">
+    <%= form.label :recession_id %>
+     <%#= form.text_field :recession_id, id: :recession_id %>
+    
+   <%= form.select :recession_id, @options %> 
+
+</div>
+
+  <div class="field">
+    <%= form.label :prediction %>
+    <%= form.text_field :prediction, id: :user_prediction %>
+  </div>
+  
+   <div class="field">
+    <%= form.label :account_id %>
+        <%#= form.text_field :account_id, id: :account_id %>
+
+        <%= form.select :account_id, @name %>
+
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <% else %>
+       <div id="signuplink"> <%= link_to "To create a prediction login or signup here", login_path %>
+       </div>
+  <% end %>
+    
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Date: MyString
+  CCSI: 1.5
+  Unemployment: 1.5
+  GDPGrowth: 1.5
+  Oil_Price: 1.5
+  IPI: 1.5
+  Recession_Dates: 1
+  Nonfarm_Payrolls: 1.5
+
+two:
+  Date: MyString
+  CCSI: 1.5
+  Unemployment: 1.5
+  GDPGrowth: 1.5
+  Oil_Price: 1.5
+  IPI: 1.5
+  Recession_Dates: 1
+  Nonfarm_Payrolls: 1.5

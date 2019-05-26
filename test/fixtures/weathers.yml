@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Date: MyString
+  CCSI: 1.5
+  CEI: 1.5
+  Warm_Areas: 1.5
+  Cold_Areas: 1.5
+  DSCI: 1.5
+
+two:
+  Date: MyString
+  CCSI: 1.5
+  CEI: 1.5
+  Warm_Areas: 1.5
+  Cold_Areas: 1.5
+  DSCI: 1.5

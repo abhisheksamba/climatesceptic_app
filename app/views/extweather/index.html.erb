@@ -1,0 +1,34 @@
+<%= flash[:notice] %>
+<table>
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Date </th>
+            <th> CCSI </th>
+            <th> CEI</th>
+            <th> Warm Areas</th>
+            <th> Cold Areas </th>
+            <th> DSCI </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @weathers.each do |n| %>
+        <tr>
+            <td> <%= n.id %></td>
+            <td> <%= n.Date %></td>
+            <td> <%= n.CCSI %></td>
+            <td> <%= n.CEI %></td>
+            <td> <%= n.Warm_Areas %></td>
+            <td> <%= n.Cold_Areas %></td>
+            <td> <%= n.DSCI %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+<div>
+    <h3> Import a CSV File</h3>
+    <%= form_tag import_extweather_index_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+    <% end %>
+</div>

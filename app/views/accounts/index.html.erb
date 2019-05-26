@@ -1,0 +1,13 @@
+<% provide(:title, 'All accounts') %>
+<h1>All Accounts!</h1>
+
+<ul class="accounts">
+  <% @accounts.each do |account| %>
+    <li>
+      <%= link_to account.name, account %>
+      <% if current_account.admin? && !current_account?(account) %>
+        <%= link_to "delete", account, method: :delete, data: { confirm: "Are you sure?" } %>
+        <% end %>
+    </li>
+  <% end %>
+</ul>

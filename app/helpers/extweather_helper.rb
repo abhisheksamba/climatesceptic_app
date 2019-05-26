@@ -1,0 +1,2 @@
+module ExtweatherHelper
+end

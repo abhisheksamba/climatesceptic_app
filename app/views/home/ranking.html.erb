@@ -1,0 +1,19 @@
+<h1>Record of All Predictions</h1>
+
+<table class = "table table-bordered table-striped">
+    <th>Recession ID</th>
+    <th>Account</th>
+    <th>Prediction</th>
+    <th>Actual CCSI</th>
+    <th>Difference</th>
+    <!--<%#= @rank %>-->
+        <%@rank.each_key do |r| %>
+            <tr>
+                <td><%=@recessions.find(@users.find(r).recession_id).Date %></td>
+                <td><%=@accounts.find(@users.find(r).account_id).name %></td>
+                <td><%=(@users.find(r)).prediction %></td>
+                <td><%=@recessions.find(@users.find(r).recession_id).CCSI %></td>
+                <td><%=@rank[r] %></td>
+            </tr>
+        <%end%>
+</table>

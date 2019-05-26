@@ -1,0 +1,11 @@
+<h1>Climate Change Sceptic Index (CCSI)</h1>
+<div>
+    <h3> What is the CCSI? </h3>
+        <p> The CCSI is an aggregate-level measure of climate scepticism in the US and acts as a proxy to run regression analysis to determine what
+        factors help predict the level of scepticism in the US.
+        </p>
+</div>
+
+
+
+<%= line_chart EliteCue.group(:Date).maximum(:CCSI), label: "CCSI in period", xtitle: "Period Number", ytitle: "CCSI", min: 15, max: 35, colors: ["#6CF904"] %>

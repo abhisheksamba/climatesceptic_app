@@ -1,0 +1,32 @@
+<%= flash[:notice] %>
+<table>
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> Date </th>
+            <th> CCSI </th>
+            <th> Media Index (Coverage) </th>
+            <th> Count of Environmental Magazines</th>
+            <th> Count of Conservative Magazines</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @media.each do |n| %>
+        <tr>
+            <td> <%= n.id %></td>
+            <td> <%= n.Date %></td>
+            <td> <%= n.CCSI %></td>
+            <td> <%= n.Media_Index %></td>
+            <td> <%= n.Environmental_Magazines %></td>
+            <td> <%= n.Conservative_Magazines %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+<div>
+    <h3> Import a CSV File</h3>
+    <%= form_tag import_advocacy_index_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+    <% end %>
+</div>
